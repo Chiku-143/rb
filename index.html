@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyInsurance.com - Protecting What Matters</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="quote.html">Get a Quote</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="banner.jpg" alt="Insurance Banner">
+        <div class="hero-text">
+            <h1>Your Trusted Insurance Partner</h1>
+            <p>Find the best insurance solutions for your needs.</p>
+            <a href="quote.html" class="cta-button">Get a Quote</a>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="services-preview">
+        <h2>Our Services</h2>
+        <div class="service-item">
+            <h3>Life Insurance</h3>
+            <p>Protect your loved ones with affordable life insurance.</p>
+        </div>
+        div class="share-buttons">
+  <h3>Share this page:</h3>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://myinsurance.com" target="_blank">Share on Facebook</a>
+  <a href="https://twitter.com/intent/tweet?url=https://myinsurance.com&text=Check%20out%20this%20website!" target="_blank">Share on Twitter</a>
+  <a href="mailto:?subject=Check out this website&body=Visit this amazing website: https://myinsurance.com" target="_blank">Share via Email</a>
+  <a href="https://wa.me/?text=Check%20out%20this%20website:%20https://myinsurance.com" target="_blank">Share on WhatsApp</a>     
+  <div class="service-item">
+            <h3>Health Insurance</h3>
+            <p>Comprehensive coverage for your health and well-being.</p>
+        </div>
+        <div class="share-buttons">
+            <h3>Share this page:</h3>
+            <button onclick="shareOnSocial('facebook')">Share on Facebook</button>
+            <button onclick="shareOnSocial('twitter')">Share on Twitter</button>
+            
+            <button onclick="shareOnSocial('WhatsApp')">Share on LinkedIn</button>
+          </div>
+          </div>
+          
+          <script>
+            function shareOnSocial(platform) {
+              const pageUrl = encodeURIComponent(window.location.href);
+              const pageTitle = encodeURIComponent(document.title);
+          
+              let shareUrl = '';
+              if (platform === 'facebook') {
+                shareUrl = https://www.facebook.com/sharer/sharer.php?u=${pageUrl};
+              } else if (platform === 'twitter') {
+                shareUrl = https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle};
+              } else if (platform === 'whatsapp') {
+                shareUrl = https://www.whatsappp.com/sharing/share-offsite/?url=${pageUrl};
+              }
+          
+              window.open(shareUrl, '_blank');
+            }
+          </script>
+          <div class="share-buttons">
+            <h3>Share this page:</h3>
+            <button id="shareBtn">Share</button>
+          </div>
+          
+          <script>
+            const shareBtn = document.getElementById('shareBtn');
+          
+            shareBtn.addEventListener('click', async () => {
+              if (navigator.share) {
+                try {
+                  await navigator.share({
+                    title: document.title,
+                    text: 'Check out this website!',
+                    url: window.location.href,
+                  });
+                  console.log('Thanks for sharing!');
+                } catch (err) {
+                  console.error('Error sharing:', err);
+                }
+              } else {
+                alert('Web Share API is not supported in your browser.');
+              }
+            });
+          </script>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+          <div class="share-buttons">
+            <h3>Share this page:</h3>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://myinsurance.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="https://twitter.com/intent/tweet?url=https://myinsurance.com&text=Check%20out%20this%20website!" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="https://www.whatsapp.com/sharing/share-offsite/?url=https://myinsurance.com" target="_blank"><i class="fab fa-whatsapp"></i> whatsapp</a>
+            
+          </div>
+          
+          <style>
+          .share-buttons a {
+            margin: 5px;
+            padding: 10px 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+          }
+          
+          .share-buttons a i {
+            margin-right: 5px;
+          }
+          
+          .share-buttons a:hover {
+            opacity: 0.8;
+          }
+          </style>
+        <div class="service-item">
+            <h3>Car Insurance</h3>
+            <p>Get the best rates for your car insurance needs.</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our Customers Say</h2>
+        <p>"MyInsurance made finding the right policy so easy. Highly recommend!" - Sarah L.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 MyInsurance.com | All Rights Reserved</p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
